@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navegation"
+    app:startDestination="@id/launchFragment">
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.dbappgame.challengespacex.presentation.LaunchFragment"
+        android:label="LaunchFragment" >
+        <action
+            android:id="@+id/action_launchFragment_to_launchDetailFragment"
+            app:destination="@id/launchDetailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/launchDetailFragment"
+        android:name="com.dbappgame.challengespacex.presentation.LaunchDetailFragment"
+        android:label="LaunchDetailFragment" />
+</navigation>
