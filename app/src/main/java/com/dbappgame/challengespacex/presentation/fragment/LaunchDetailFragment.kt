@@ -1,17 +1,14 @@
-package com.dbappgame.challengespacex.presentation
+package com.dbappgame.challengespacex.presentation.fragment
 
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.MediaController
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.viewpager2.widget.ViewPager2
-import com.bumptech.glide.Glide
-import com.dbappgame.challengespacex.R
 import com.dbappgame.challengespacex.databinding.FragmentLaunchDetailBinding
+import com.dbappgame.challengespacex.presentation.viewmodel.LaunchViewModel
+import com.dbappgame.challengespacex.presentation.adapter.LaunchViewPagerAdapter
 import com.dbappgame.challengespacex.utils.ZoomOutPageTransformer
 
 
@@ -33,7 +30,7 @@ class LaunchDetailFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.launches.value?.let {
-            val adapter =LaunchViewPagerAdapter(it,requireActivity())
+            val adapter = LaunchViewPagerAdapter(it,requireActivity())
 
 
             binding.pager.adapter =  adapter

@@ -1,4 +1,4 @@
-package com.dbappgame.challengespacex.presentation
+package com.dbappgame.challengespacex.presentation.fragment
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -11,13 +11,13 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
 import com.dbappgame.challengespacex.R
 import com.dbappgame.challengespacex.databinding.FragmentLaunchBinding
 import com.dbappgame.challengespacex.domain.model.Launch
+import com.dbappgame.challengespacex.presentation.adapter.LaunchAdapter
+import com.dbappgame.challengespacex.presentation.viewmodel.LaunchViewModel
 import com.dbappgame.challengespacex.utils.loadImage
 import com.dbappgame.challengespacex.utils.show
-import com.squareup.picasso.Picasso
 
 class LaunchFragment : Fragment() {
 

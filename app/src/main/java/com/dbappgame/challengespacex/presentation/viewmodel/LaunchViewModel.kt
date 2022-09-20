@@ -1,13 +1,11 @@
-package com.dbappgame.challengespacex.presentation
+package com.dbappgame.challengespacex.presentation.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dbappgame.challengespacex.data.LaunchNetDataSource
-import com.dbappgame.challengespacex.data.model.LaunchDTO
-import com.dbappgame.challengespacex.data.repository.LaunchRepository
 import com.dbappgame.challengespacex.domain.model.Launch
+import com.dbappgame.challengespacex.domain.usecase.GetLaunchesUseCase
 import com.dbappgame.challengespacex.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineExceptionHandler
@@ -19,7 +17,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class LaunchViewModel @Inject constructor(
-    private val repository: LaunchRepository
+    private val getLaunchesUseCase: GetLaunchesUseCase
 ) : ViewModel() {
 
     private val _launches = MutableLiveData<List<Launch>>()
@@ -39,7 +37,7 @@ class LaunchViewModel @Inject constructor(
                     "Error" + throwable.message
                 )
             }) {
-                when (val resource = repository.getLaunches()) {
+                when (val resource = getLaunchesUseCase()) {
                     is Resource.Success -> {
                         withContext(Dispatchers.Main) { resource.data.reversed().let { _launches.value = it } }
                     }

@@ -1,4 +1,4 @@
-package com.dbappgame.challengespacex.presentation
+package com.dbappgame.challengespacex.presentation.fragment
 
 import android.os.Build
 import android.os.Bundle

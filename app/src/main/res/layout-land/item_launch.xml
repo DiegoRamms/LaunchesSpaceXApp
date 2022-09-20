@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginTop="2dp"
     android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
     android:minHeight="150dp">
-
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView"
@@ -14,27 +13,28 @@
         android:layout_height="50dp"
         android:layout_marginTop="2dp"
         android:elevation="20dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@mipmap/ic_launcher" />
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
-        android:clickable="true"
-        app:rippleColor="@color/aqua_acc"
         android:layout_height="wrap_content"
-        app:shapeAppearance="@style/ShapeAppearance.Space.Card2"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
+        android:clickable="true"
         android:minHeight="110dp"
         app:cardBackgroundColor="@color/grey_p"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/aqua_acc"
+        app:shapeAppearance="@style/ShapeAppearance.Space.Card2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -46,9 +46,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
                 android:fontFamily="sans-serif-black"
+                android:textAlignment="center"
                 android:textColor="#A8A8A8"
                 android:textSize="18sp"
-                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -60,14 +60,12 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
                 android:textColor="#A8A8A8"
-                app:layout_constraintBottom_toBottomOf="parent"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@id/tvLaunchName"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/tvLaunchName"
+                app:layout_constraintStart_toStartOf="@id/tvLaunchName"
                 app:layout_constraintTop_toBottomOf="@id/tvLaunchName"
                 tools:text="Rocket: falcon1" />
-
-
 
             <TextView
                 android:id="@+id/tvYear"
@@ -87,6 +85,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

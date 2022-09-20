@@ -1,4 +1,4 @@
-package com.dbappgame.challengespacex.presentation
+package com.dbappgame.challengespacex.presentation.adapter
 
 import androidx.recyclerview.widget.DiffUtil
 import com.dbappgame.challengespacex.domain.model.Launch

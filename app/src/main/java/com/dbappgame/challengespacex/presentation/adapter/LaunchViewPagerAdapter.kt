@@ -1,11 +1,10 @@
-package com.dbappgame.challengespacex.presentation
+package com.dbappgame.challengespacex.presentation.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import androidx.viewpager2.widget.ViewPager2
 import com.dbappgame.challengespacex.domain.model.Launch
+import com.dbappgame.challengespacex.presentation.fragment.CurrentItemFragment
 
 class LaunchViewPagerAdapter(private val launches : List<Launch>,fm: FragmentActivity): FragmentStateAdapter(fm) {
     override fun getItemCount() = launches.size

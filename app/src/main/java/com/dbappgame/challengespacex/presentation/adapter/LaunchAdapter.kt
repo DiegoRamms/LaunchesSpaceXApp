@@ -1,4 +1,4 @@
-package com.dbappgame.challengespacex.presentation
+package com.dbappgame.challengespacex.presentation.adapter
 
 
 import android.content.Context
@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.bumptech.glide.Glide
 import com.dbappgame.challengespacex.R
 import com.dbappgame.challengespacex.databinding.ItemLaunchBinding
 import com.dbappgame.challengespacex.domain.model.Launch

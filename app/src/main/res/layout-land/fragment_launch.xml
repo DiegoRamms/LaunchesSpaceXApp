@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvLaunches"
         android:layout_width="320dp"
@@ -16,18 +15,18 @@
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        app:dividerColor="#E7E7E7"
         android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent"
+        app:dividerColor="#E7E7E7"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/rvLaunches"
         app:layout_constraintEnd_toStartOf="@id/scroll"
-        android:layout_width="1dp"
-        android:layout_height="0dp"/>
+        app:layout_constraintStart_toEndOf="@id/rvLaunches"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -40,21 +39,21 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clInfo"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:layout_marginBottom="15dp">
 
             <TextView
                 android:id="@+id/tvMission"
-                app:layout_constraintHorizontal_bias="0"
                 android:layout_width="0dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toStartOf="@+id/imageSmall"
+                app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Mision"
@@ -62,19 +61,20 @@
 
 
             <ImageView
-                app:layout_constraintTop_toTopOf="@id/imageSmall"
-                app:layout_constraintBottom_toBottomOf="@id/imageSmall"
-                app:layout_constraintStart_toStartOf="@id/imageSmall"
-                app:layout_constraintEnd_toEndOf="@id/imageSmall"
-                android:background="@drawable/bg_item"
                 android:layout_width="70dp"
-                android:layout_height="70dp"/>
+                android:layout_height="70dp"
+                android:background="@drawable/bg_item"
+                app:layout_constraintBottom_toBottomOf="@id/imageSmall"
+                app:layout_constraintEnd_toEndOf="@id/imageSmall"
+                app:layout_constraintStart_toStartOf="@id/imageSmall"
+                app:layout_constraintTop_toTopOf="@id/imageSmall" />
+
             <ImageView
                 android:id="@+id/imageSmall"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginEnd="50dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginEnd="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tvMission"
                 app:srcCompat="@drawable/def_rocket" />
@@ -84,72 +84,68 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:layout_marginEnd="50dp"
                 android:fontFamily="sans-serif-light"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-                app:layout_constraintHorizontal_bias="1"
-                android:layout_marginEnd="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/cardView" />
+
             <TextView
                 android:id="@+id/site"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                app:layout_constraintHorizontal_bias="0"
-                android:layout_marginTop="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="@id/tvMission"
                 app:layout_constraintTop_toBottomOf="@id/tvMission" />
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-                android:justificationMode="inter_word"
-                android:layout_marginStart="10dp"
-                app:layout_constraintHorizontal_bias="0"
-
-                app:layout_constraintStart_toEndOf="@id/cardView"
                 app:layout_constraintEnd_toEndOf="@id/date"
-                app:layout_constraintTop_toBottomOf="@id/date"
-                app:layout_constraintBottom_toBottomOf="parent"
-                />
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/cardView"
+                app:layout_constraintTop_toBottomOf="@id/date" />
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
-                app:layout_constraintHorizontal_bias="0"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="30dp"
-                app:cardCornerRadius="20dp"
                 app:cardBackgroundColor="#112633"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="@id/tvMission"
                 app:layout_constraintTop_toBottomOf="@id/site"
                 app:shapeAppearance="@style/ShapeAppearance.Space.Card2">
+
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/imgBig"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     android:scaleType="centerCrop"
-                    app:shapeAppearance="@style/ShapeAppearance.Space.Card2"
-                    />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:shapeAppearance="@style/ShapeAppearance.Space.Card2" />
             </androidx.cardview.widget.CardView>
 
 
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

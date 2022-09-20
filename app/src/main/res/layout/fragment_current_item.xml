@@ -9,25 +9,23 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageBack"
-        app:shapeAppearance="@style/ShapeAppearance.Space.Img"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
         android:layout_width="0dp"
-        android:layout_height="208dp"/>
+        android:layout_height="208dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Space.Img" />
 
 
     <ImageView
         android:id="@+id/imageSmall"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        app:layout_constraintTop_toBottomOf="@id/imageBack"
         android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageBack"
         app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintBottom_toBottomOf="@id/imageBack"
+        app:layout_constraintTop_toBottomOf="@id/imageBack"
         app:srcCompat="@drawable/def_rocket" />
-
 
     <TextView
         android:id="@+id/tvMissionName"
@@ -71,27 +69,27 @@
             android:id="@+id/tvRocket"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="sans-serif-black"
             android:text="Detalle"
             android:textColor="@color/white"
             android:textSize="25sp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="40dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-         />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvDetail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
             android:fontFamily="sans-serif-condensed"
+            android:justificationMode="inter_word"
             android:text="Detalle"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/tvRocket"
             app:layout_constraintTop_toBottomOf="@id/tvRocket"

@@ -6,18 +6,16 @@
     android:layout_height="match_parent"
     android:transitionName="image_icon">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvLaunches"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
         android:layoutAnimation="@anim/layout_animation"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/progress_loading"
@@ -31,6 +29,5 @@
         app:lottie_autoPlay="true"
         app:lottie_fileName="astronaut.json"
         app:lottie_loop="true" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
