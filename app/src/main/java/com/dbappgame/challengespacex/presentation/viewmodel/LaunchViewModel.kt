@@ -29,7 +29,11 @@ class LaunchViewModel @Inject constructor(
     var launchSelected: Launch? = null
     var currentPosition: Int = 0
 
-     fun getLaunches() {
+    init {
+        getLaunches()
+    }
+
+     private fun getLaunches() {
         _isLoading.value = true
         viewModelScope.launch(Dispatchers.Main) {
             withContext(Dispatchers.IO + CoroutineExceptionHandler { _, throwable ->

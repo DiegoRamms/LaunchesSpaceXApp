@@ -39,8 +39,7 @@ class LaunchFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initializeAdapter()
         initializeObservers()
-        if (launchAdapter.currentList.isEmpty())
-            viewModel.getLaunches()
+
 
     }
 
